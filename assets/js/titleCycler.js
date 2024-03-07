@@ -1,5 +1,6 @@
 var heroCard = document.getElementById("hero-card");
 var title = heroCard.querySelector("h1");
+var subtitle = heroCard.querySelector("p");
 var products = [
     "Arwana Silver",
     "Koki Redcap",
@@ -7,8 +8,13 @@ var products = [
     "Ikan Koi",
     "Molly Orange",
 ];
-swiper.on("slideChange", function () {
-//  title.style.setProperty();
-    title.textContent = products[swiper.activeIndex];
-//    pointer = pointer < products.length - 1 ? (pointer + 1) : 0;
+
+swiper.on("slideChangeTransitionStart", function () {
+    title.classList.add('fade');
 });
+
+swiper.on("slideChangeTransitionEnd", function () {
+    title.classList.remove('fade');
+    title.textContent = products[swiper.activeIndex];
+    }
+);
