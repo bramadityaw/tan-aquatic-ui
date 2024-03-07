@@ -14,6 +14,15 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+    #hero-card h1 {
+        opacity: 1;
+        transition: opacity 600ms;
+    }
+
+    #hero-card h1.fade {
+        opacity: 0;
+    }
+
     .swiper {
       max-width: 1280px;
       aspect-ratio: 1280/625;
@@ -53,7 +62,9 @@
             <div class="border-gray-100 border-4 rounded-md w-[30%] p-5" id="hero-card">
                 <div class="h-[80%]">
                     <h1 class="text-6xl text-balance">Arwana Silver</h1>
-                    <p class="text-lg">..dan masih banyak lagi</p>
+                    <p class="text-lg">
+                        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
+                    </p>
                 </div>
 
                 <a class="block bg-[#1B3C73] font-semibold text-white text-center text-lg py-3" href="./toko">
@@ -65,7 +76,7 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <img src="./assets/images/arwana_silver.jpg" alt="">
+                        <img src="./assets/images/arwana_silver.jpeg" alt="">
                     </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/koki_redcap.jpg" alt="">
@@ -96,8 +107,8 @@
                     <p class="text-center">M. Ferdiansyah Tandianus <br/> (Pemilik)</p>
                 </div>
                 <div class="w-[60%] mt-9">
-                    <p>Tan Aquatic adalah toko ikan hias air tawar yang dimiliki oleh Ferdiansyah Tandianus, seorang pemuda asli Palembang. Selain ikan hias air tawar, Tan Aquatic juga menjual perlengkapan aquarium dan aquascape</p>
-                    <p>Berawal dari kecintaannya terhadap hewan peliharaan, usaha ini berkembang dari hobi menjadi sebuah perusahaan yang cukup dikenal di Sumatra Selatan, diberi nama sesuai dengan suku kata pertama dari nama belakangnya.</p>
+                    <p>Tan Aquatic adalah toko ikan hias air tawar yang dimiliki oleh Ferdiansyah Tandianus, seorang pemuda asli Tanjung Enim. Selain ikan hias air tawar, Tan Aquatic juga menjual perlengkapan aquarium dan aquascape.</p>
+                    <p>Berawal dari kecintaannya terhadap hewan peliharaan, usaha ini berkembang dari hobi menjadi sebuah usaha rumahan yang cukup dikenal di Tanjung, diberi nama sesuai dengan suku kata pertama dari nama belakangnya.</p>
                 </div> 
             </div>
         </section>
@@ -124,7 +135,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
                             <path d="M18.3605 6.21113C17.9561 5.27845 17.3729 4.43399 16.6439 3.72539C15.9126 3.01039 15.0504 2.4429 14.1045 2.05391C13.1205 1.6457 12.0764 1.43945 11 1.43945C9.92363 1.43945 8.87949 1.6457 7.89551 2.05176C6.94375 2.44492 6.09082 3.00781 5.35605 3.72324C4.62757 4.43224 4.04447 5.2766 3.63945 6.20898C3.22051 7.17578 3.00781 8.20273 3.00781 9.25977C3.00781 10.7766 3.3709 12.2869 4.08418 13.7436C4.65781 14.9145 5.45918 16.0553 6.46895 17.1402C8.19414 18.9922 10.0031 20.1244 10.5166 20.4273C10.6624 20.5134 10.8286 20.5587 10.9979 20.5584C11.1654 20.5584 11.3309 20.5154 11.4791 20.4273C11.9926 20.1244 13.8016 18.9922 15.5268 17.1402C16.5365 16.0574 17.3379 14.9145 17.9115 13.7436C18.6291 12.2891 18.9922 10.7809 18.9922 9.26191C18.9922 8.20488 18.7795 7.17793 18.3605 6.21113ZM11 18.9105C9.58418 18.0104 4.55469 14.4461 4.55469 9.26191C4.55469 7.58828 5.22285 6.01563 6.43672 4.82969C7.65488 3.6416 9.2748 2.98633 11 2.98633C12.7252 2.98633 14.3451 3.6416 15.5633 4.83184C16.7771 6.01562 17.4453 7.58828 17.4453 9.26191C17.4453 14.4461 12.4158 18.0104 11 18.9105ZM11 5.65039C8.91172 5.65039 7.21875 7.34336 7.21875 9.43164C7.21875 11.5199 8.91172 13.2129 11 13.2129C13.0883 13.2129 14.7812 11.5199 14.7812 9.43164C14.7812 7.34336 13.0883 5.65039 11 5.65039ZM12.7016 11.1332C12.4784 11.357 12.2132 11.5345 11.9211 11.6554C11.6291 11.7764 11.3161 11.8384 11 11.8379C10.3576 11.8379 9.75391 11.5865 9.29844 11.1332C9.07462 10.91 8.89714 10.6448 8.7762 10.3528C8.65526 10.0608 8.59326 9.74771 8.59375 9.43164C8.59375 8.78926 8.84512 8.18555 9.29844 7.73008C9.75391 7.27461 10.3576 7.02539 11 7.02539C11.6424 7.02539 12.2461 7.27461 12.7016 7.73008C13.157 8.18555 13.4062 8.78926 13.4062 9.43164C13.4062 10.074 13.157 10.6777 12.7016 11.1332Z" fill="white"/>
                         </svg>
-                        <a class="block ml-4 w-[90%] text-balance" href="https://maps.app.goo.gl/igL3pTLTUekftqhb9">Jl. Baturaja, Ps. Tj. Enim, Kec. Lawang Kidul, Kabupaten Muara Enim, Sumatera Selatan 31711</a>
+                        <a class="block ml-4 w-[90%] text-balance" href="https://maps.app.goo.gl/igL3pTLTUekftqhb9">Jl. Baturaja no. 650, Tanjung Buhuk, Tanjung Enim, Kabupaten Muara Enim, Provinsi Sumatera Selatan</a>
                     </div>
                     <h4>Jam Buka:</h4>
                     <div class="flex">
@@ -167,16 +178,17 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
-          direction: 'horizontal',
-          loop: false,
-        
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          autoplay: {
-            delay: 5000,
-          },
+            direction: 'horizontal',
+            loop: false,
+            speed: 600,     
+
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+            autoplay: {
+              delay: 5000,
+            },
         });
     </script>
     <script src="./assets/js/titleCycler.js"></script>
