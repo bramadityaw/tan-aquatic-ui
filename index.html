@@ -14,34 +14,51 @@
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    #hero-card h1 {
-        opacity: 1;
-        transition: opacity 600ms;
-    }
-
-    #hero-card h1.fade {
-        opacity: 0;
-    }
-
     .swiper {
-      max-width: 1280px;
-      aspect-ratio: 1280/625;
-      width: 60%;
-      margin-left: 0;
-      margin-right: 0;
+        width: 55%;
+        max-width: 1280px;
+        z-index: 0;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .swiper * {
+        z-index: 0;
+    }
+
+    .swiper-slide h1 {
+        font-size: 3em;
+    }
+
+    .swiper-slide img {
+        aspect-ratio: 1280/720;
+    }
+
+    .swiper-button-next::after, .swiper-button-prev::after {
+        content: "";
+    }
+
+    .swiper-button-next svg, .swiper-button-prev svg {
+        aspect-ratio: 1;
+    }
+
+    
+    .swiper-button-next, .swiper-button-prev {
+        height: 8%;
+        width: 8%;
     }
     </style>
 </head>
 <body>
-    <header class="bg-[#1b3c73]">
-        <nav class="flex px-12 py-11 text-white text-2xl items-center justify-between">
+    <header class="bg-[#1b3c73] sticky top-0 z-10">
+        <nav class=" flex px-12 py-11 text-white text-[125%] items-center justify-between">
             <a href="/" class="w-1/4 max-w-[320px] max-h-16">
                 <div class="items-center flex justify-between">
                     <img src="./assets/images/logo.png" alt="Logo Tan Aquatic">
-                    <h1 class="font-semibold text-4xl mr-3">Tan Aquatic</h1>
+                    <h1 class="hidden font-semibold text-4xl mr-3 sm:inline">Tan Aquatic</h1>
                 </div>
             </a>
-            <div class="rounded-md bg-white text-[#909090] px-4 py-3 w-[35%]">
+            <div class="rounded-md bg-white text-[#909090] px-4 py-3 w-[50%] sm:w-[35%]">
                 <form action="search" class="flex justify-between">
                     <input class="text-base w-full outline-transparent" type="text" placeholder="Cari ikan hias, pakan, aksesoris akuarium...">
                     <button type="submit">
@@ -49,64 +66,77 @@
                     </button>
                 </form>
             </div>
-            <div class="w-1/4 flex justify-between max-w-[500px]">
+            <div class="hidden w-1/5 md:flex justify-between max-w-[425px]">
                 <a href="./">Beranda</a>
                 <a href="./toko">Toko</a>
                 <a href="./blog">Blog</a>
-                <a href="./login">Log In</a>
+            </div>
+            <div class="">
+                <a href="./login">Masuk</a>
             </div>
         </nav>
     </header>
     <main>
-        <section class="my-11 mx-auto flex w-4/5 justify-around">
-            <div class="border-gray-100 border-4 rounded-md w-[30%] p-5" id="hero-card">
-                <div class="h-[80%]">
-                    <h1 class="text-6xl text-balance">Arwana Silver</h1>
-                    <p class="text-lg">
-                        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
-                    </p>
-                </div>
-
-                <a class="block bg-[#1B3C73] font-semibold text-white text-center text-lg py-3" href="./toko">
-                    Beli Sekarang
-                </a>
-            </div>
+        <section class="flex justify-around mx-auto my-5">
             <!--Slider-->
-            <div class="swiper">
+            <div class="swiper mx-0">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
                         <img src="./assets/images/arwana_silver.jpeg" alt="">
+                        <div class="absolute bottom-0 w-full px-16 pb-2 text-white bg-gradient-to-t from-black">
+                            <h1>Arwana Silver</h1>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/koki_redcap.jpg" alt="">
+                        <div class="absolute bottom-0 w-full px-16 pb-2 text-white bg-gradient-to-t from-black">
+                            <h1>Koki Redcap</h1>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/komet.jpg" alt="">
+                        <div class="absolute bottom-0 w-full px-16 pb-2 text-white bg-gradient-to-t from-black">
+                            <h1>Ikan Komet</h1>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/koi.jpg" alt="">
+                        <div class="absolute bottom-0 w-full px-16 pb-2 text-white bg-gradient-to-t from-black">
+                            <h1>Ikan Koi</h1>
+                        </div>
                     </div>
                     <div class="swiper-slide">
                         <img src="./assets/images/molly_orange.jpg" alt="">
+                        <div class="absolute bottom-0 w-full px-16 pb-2 text-white bg-gradient-to-t from-black">
+                            <h1>Molly Orange</h1>
+                        </div>
                     </div>
                 </div>
               
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-              
-                <div class="swiper-scrollbar"></div>
+                <div class="swiper-button-prev">
+                    <svg width="63" height="67" viewBox="0 0 63 67" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.75 3.19019C15.8738 3.19019 3 16.7521 3 33.4842C3 50.213 15.8738 63.7782 31.75 63.7782C47.6262 63.7782 60.5 50.213 60.5 33.4842C60.5 16.7521 47.6262 3.19019 31.75 3.19019Z" stroke="white" stroke-width="4.66216" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M36.2329 22.116L25.398 33.4836L36.2329 44.8512" stroke="white" stroke-width="4.66216" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="swiper-button-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="67" viewBox="0 0 64 67" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32 64.3049C48.0143 64.3049 61 50.6251 61 33.7475C61 16.8732 48.0143 3.19012 32 3.19012C15.9857 3.19012 3 16.8732 3 33.7475C3 50.6251 15.9857 64.3049 32 64.3049Z" stroke="white" stroke-width="4.7027" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M27.4773 45.2144L38.4064 33.7479L27.4773 22.2814" stroke="white" stroke-width="4.7027" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
             </div>
         </section>
     
         <section class="py-11 px-[15%] bg-[#1b3c73] text-white">
             <h1 class="text-center h-[50px] text-3xl font-semibold border-b-[1px] border-b-white">Profil Tan Aquatic</h1>
-            <div class="flex justify-around">
+            <div class="sm:flex justify-around">
                 <div class="m-9">
                     <img class="aspect-square w-[128px] m-auto" src="./assets/images/tan.png" alt="Foto pemilik Tan Aquatic, M. Ferdiansyah Tandianus">
                     <p class="text-center">M. Ferdiansyah Tandianus <br/> (Pemilik)</p>
                 </div>
-                <div class="w-[60%] mt-9">
+                <div class="sm:w-[60%] mt-9">
                     <p>Tan Aquatic adalah toko ikan hias air tawar yang dimiliki oleh Ferdiansyah Tandianus, seorang pemuda asli Tanjung Enim. Selain ikan hias air tawar, Tan Aquatic juga menjual perlengkapan aquarium dan aquascape.</p>
                     <p>Berawal dari kecintaannya terhadap hewan peliharaan, usaha ini berkembang dari hobi menjadi sebuah usaha rumahan yang cukup dikenal di Tanjung, diberi nama sesuai dengan suku kata pertama dari nama belakangnya.</p>
                 </div> 
@@ -115,14 +145,14 @@
     </main>
     <footer>
         <div class="bg-[#504B47] px-12 py-6 text-white">
-            <div class="grid grid-cols-4 gap-x-4">
+            <div class="sm:grid sm:grid-cols-4 sm:gap-x-4">
                 <a href="/" class="max-w-[320px] max-h-16">
                     <div class="flex justify-between items-center">
                         <img src="./assets/images/logo.png" alt="Logo Tan Aquatic">
                         <h1 class="font-semibold text-4xl block">Tan Aquatic</h1>
                     </div>
                 </a>
-                <div class="text-xl ml-4">
+                <div class="text-xl sm:ml-4">
                     <a class="block" href="./">Beranda</a>
                     <a class="block" href="./blog">Blog</a>
                     <a class="block" href="./toko">Toko</a>
@@ -186,11 +216,10 @@
               nextEl: '.swiper-button-next',
               prevEl: '.swiper-button-prev',
             },
-            autoplay: {
-              delay: 5000,
-            },
+           autoplay: {
+             delay: 5000,
+           },
         });
     </script>
-    <script src="./assets/js/titleCycler.js"></script>
 </body>
 </html>
